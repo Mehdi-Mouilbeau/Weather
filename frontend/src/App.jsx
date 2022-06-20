@@ -1,5 +1,6 @@
 import React from "react";
 import Video from "./assets/canyon.mp4";
+// eslint-disable-next-line no-unused-vars
 import LocationIcon from "./assets/LocationIcon.png";
 import "./Scss/App.scss";
 
