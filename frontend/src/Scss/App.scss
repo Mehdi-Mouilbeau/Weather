@@ -1,0 +1,86 @@
+@import 'Mixing.scss';
+
+$backgroundColorDark: rgba(80,199,249);
+$backgroundColorLight: rgba(150,199,249);
+$Black: rgba(0,0,0,0.9);
+$Light: rgba(255,255,255,0.9);
+
+body{
+    min-height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(-280deg, $backgroundColorDark 80%, $backgroundColorLight);
+    font-family:Arial, Helvetica, sans-serif;
+
+    .main__div{
+        height: 600px;
+        width: 350px;
+        position: relative;
+        border-radius: 10px;
+        background: transparent;
+        box-shadow: 0px 10px 15px 0px $Black;
+        @include flexbox(column);
+
+    .search__bar{
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        top: 1.5rem;
+        @include flexbox(column);
+        background: inherit;
+        input{
+            background: transparent;
+            border: none;
+            box-shadow: inset 1px 1px 5px 2px transparentize($Black, 0.2), inset 1px 1 px 5px 2 px transparentize($Black, 0.2), inset -2px -2px 2px 2 px darken($backgroundColorDark, 0);
+            height: 40px;
+            width: 60%;
+            color: darken($Light, 100%);
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            &:focus{
+                border: none;
+                outline: none;
+            }
+            &::placeholder{
+                color:$Black;
+            }
+            .canyon{
+                position: relative;
+                margin-top: -3rem;
+                video{
+                    border-radius: 10%;
+                    height: 260px;
+                    width: 350px;
+                    z-index: -1;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        background: radial-gradient(transparent 30%, transparentize($backgroundColorDark,0) 70%);
+                        z-index: 10;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        mix-blend-mode: inherit;
+                        width: 100%;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        background: radial-gradient(transparent 30%, transparentize($backgroundColorDark,0) 70%);
+                        z-index: 10;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        mix-blend-mode: inherit;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    }
+}

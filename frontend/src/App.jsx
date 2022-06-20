@@ -1,7 +1,7 @@
 import React from "react";
 import Video from "./assets/canyon.mp4";
 import LocationIcon from "./assets/LocationIcon.png";
-import "./App.scss";
+import "./Scss/App.scss";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           />
         </div>
         <div className="canyon">
-          <video height="315" title="Canyon" autoPlay loop muted src={Video} />
+          <video height="180" title="Canyon" autoPlay loop muted src={Video} />
         </div>
         <div className="celcius">
           {/* <div className="LocationIcon">

@@ -1,0 +1,6 @@
+@mixin flexbox($felx__direction){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $felx__direction;   
+}
